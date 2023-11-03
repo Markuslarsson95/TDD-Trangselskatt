@@ -1,3 +1,8 @@
+## Innan du börjar
+- Försök att inte läsa framåt.
+- Gör **ett steg/krav i taget**. Meningen är att lära sig att arbeta stegvis.
+- Testa först!
+
 # Trängselskatt i Gbg
 
 Trängselskatt tas ut under fastställda tider för fordon som kör in
