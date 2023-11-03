@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrängselskattGbg", "Trängselskatt Gbg\TrängselskattGbg.csproj", "{599B7A3F-D17D-48A2-9A9A-8B3F7EB047B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrängselskattGbgTest", "TrängselskattTest\TrängselskattGbgTest.csproj", "{F1B0E48C-DC38-4E0E-A7F4-C317AAC62CB1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{599B7A3F-D17D-48A2-9A9A-8B3F7EB047B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{599B7A3F-D17D-48A2-9A9A-8B3F7EB047B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{599B7A3F-D17D-48A2-9A9A-8B3F7EB047B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{599B7A3F-D17D-48A2-9A9A-8B3F7EB047B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1B0E48C-DC38-4E0E-A7F4-C317AAC62CB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1B0E48C-DC38-4E0E-A7F4-C317AAC62CB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1B0E48C-DC38-4E0E-A7F4-C317AAC62CB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1B0E48C-DC38-4E0E-A7F4-C317AAC62CB1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6EB5F7F5-3BA8-402F-A59B-5C714FC5323A}
+	EndGlobalSection
+EndGlobal
