@@ -7,6 +7,12 @@ namespace Trängselskatt_Gbg
         public static string RäknaTotalBelopp(IEnumerable<string> tullStationPasseringarList)
         {
             int summa = 0;
+            int dagsMaxSumma = 0;
+            DateTime senastePasseringDatum = DateTime.MinValue;
+
+            //int maxAvgift = 0;
+            //var tidigarePasseringar = new Dictionary<string, int>();
+
 
             foreach (var tullStationPasseringar in tullStationPasseringarList)
             {
@@ -14,14 +20,18 @@ namespace Trängselskatt_Gbg
                 var passering = DateTime.Parse(tullStationPasseringar, cultureInfo);
                 var timeOnly = TimeOnly.FromDateTime(passering);
 
+                //Kollar om det blir ny dag
+                if (passering.Date != senastePasseringDatum.Date)
+                {
+                    senastePasseringDatum = passering;
+                    dagsMaxSumma = 0; //Återställer dagsMaxSumman till 0 vid ny dag
+                }
+
                 if (passering.Month == 07)
                     return $"Den totala avgiften är 0kr(juli månad)";
 
-                if (passering.DayOfWeek == DayOfWeek.Saturday)
-                    return $"Den totala avgiften är 0kr(lördag)";
-
-                if (passering.DayOfWeek == DayOfWeek.Sunday)
-                    return $"Den totala avgiften är 0kr(söndag)";
+                if (passering.DayOfWeek == DayOfWeek.Saturday || passering.DayOfWeek == DayOfWeek.Sunday)
+                    return $"Den totala avgiften är 0kr({passering.DayOfWeek})";
 
                 switch (timeOnly)
                 {
@@ -78,12 +88,15 @@ namespace Trängselskatt_Gbg
                     default:
                         break;
                 }
+
+                //Sätter dagsMaxSumma till den som är högst
+                dagsMaxSumma = Math.Max(dagsMaxSumma, summa);
             }
 
-            if (summa > 60)
+            if (dagsMaxSumma > 60)
                 return $"Den totala avgiften är 60kr";
             else
-                return $"Den totala avgiften är {summa}kr";
+                return $"Den totala avgiften är {dagsMaxSumma}kr";
         }
     }
 }
